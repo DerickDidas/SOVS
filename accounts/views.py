@@ -26,7 +26,7 @@ def register(request):
         full_name = request.POST['full_name']
         NIDA_NUMBER = request.POST['NIDA_NUMBER']
         img = request.POST['image']
-        user = User.objects.create_user(password=full_name,username=NIDA_NUMBER,image=img)
+        user = User.objects.create_user(password=full_name,username=NIDA_NUMBER)
         user.save()
         messages.info(request, 'User Created')
         return redirect('login')
