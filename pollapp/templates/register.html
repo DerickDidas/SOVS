@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+</head>
+<body>
+    <form action="register" method="post">
+        {% csrf_token %}
+        <input type="text" name="full_name" placeholder="Full Name"><br>
+        <input type="number" name="NIDA_NUMBER" placeholder="NIDA number"><br>
+        <input type="file" name="image"><br>
+
+        <input type="submit">
+    </form>
+    <div>
+        {% for message in messages %}
+        <h3> {{message}}  </h3>
+        {% endfor %}
+    </div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+{% extends 'baset.html' %}
+{% block content %}
+
+
+
+<a style ="margin-bottomn: 20px"><h3>Pick Your Choice</h3></a>
+
+<h4>{{post.position}}</h4>
+
+<form action="" method="post">
+
+    {% csrf_token %}
+<ul class="list-group-horizontal" style="margin:10px">
+
+    {% for cand in cands %}
+
+        <label>
+             <div class="list-group list-group-horizontal">
+						<div class="list-group-item">
+							<a class="prod-img">
+								<img src="{{cand.img.url}}" height="150px" width="150px">
+							</a>
+                             <div>
+                                 <input class="form-check-input me-1" type="radio" name ="choice" value="{{cand.id}}" >
+                                 {{cand.name}}
+
+                             </div>
+
+						</div>
+			</div>
+        </label>
+    {% endfor %}
+
+
+     <div>
+    {% for message in messages %}
+   <nav class="nav nav-masthead justify-content-center float-md-center">
+    <a class="nav-link fw-bold py-1 px-0" href="">{{message}}</a>
+
+       {% endfor %}
+       </na>
+           </div>
+
+</ul>
+
+    <input type="submit" value="Submit"  class = 'btn btn-primary'>
+
+
+    <a class = 'btn btn-primary' href="http://127.0.0.1:8000/vote/3">next page</a>
+
+
+
+
+</form>
+
+{% endblock %}
