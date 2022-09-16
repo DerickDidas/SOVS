@@ -10,7 +10,7 @@ jinja2-time==0.2.0
 matplotlib==3.4.3
 numpy==1.21.4
 opencv-python==4.5.4.60
-Pillow
+Pillow==9.2.0
 pilow==3.1.6
 progress==1.6
 psutil==5.9.1
