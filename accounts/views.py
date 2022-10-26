@@ -12,7 +12,7 @@ def login(request):
 
         if user is not None:
             auth.login(request, user)
-            return redirect("index")
+            return redirect("face")
         else:
             messages.info(request,'invalid credentials')
             return redirect('login')
@@ -25,8 +25,7 @@ def register(request):
     if request.method == 'POST':
         full_name = request.POST['full_name']
         NIDA_NUMBER = request.POST['NIDA_NUMBER']
-        img = request.POST['image']
-        user = User.objects.create_user(password=full_name,username=NIDA_NUMBER,image=img)
+        user = User.objects.create_user(password=full_name,username=NIDA_NUMBER)
         user.save()
         messages.info(request, 'User Created')
         return redirect('login')

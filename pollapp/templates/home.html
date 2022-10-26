@@ -3,14 +3,38 @@
 {% block content %}
 
 
-   <main class="px-3">
-   <h1>Smart Online Voting System</h1>
 
-       <p class="lead">"Revolutionating African Democracy"</p>
 
-    <a href="{% url 'login' %}" class="btn btn-lg btn-secondary fw-bold border-white bg-dark">Vote here</a>
-    </p>
-  </main>
+<div>
+
+		<div class="launch-time">
+			<h1> </h1>	
+
+			<div>
+				<p id="days">00</p>
+				<span>Days</span>
+			</div>
+			<div>
+				<p id="hours">00</p>
+				<span>Hours</span>
+			</div>
+			<div>
+				<p id="minutes">00</p>
+				<span>Minutes</span>
+			</div>
+			<div>
+				<p id="seconds">00</p>
+				<span>Seconds</span>
+			</div>
+		</div>
+</div>
+
+
+   <h1> Smart Online Voting System </h1>
+
+       <p class="lead">"Revolutionizing African Democracy"</p>
+
+ <a href="{% url 'login' %}" class="btn btn-lg btn-secondary fw-bold border-white bg-dark">Vote here</a>
 
 
 {% endblock %}

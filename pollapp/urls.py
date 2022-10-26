@@ -6,9 +6,11 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('', views.home, name='home'),
-    path('index', views.index, name='index'),  # usijaze chochote hapo kwenye  path('--')ITALETA ERROR
+    path('face', views.face, name='face'),
+    path('index', views.index, name='index'),#usijaze chochote hapo kwenye  path('--')ITALETA ERROR
     path('vote/<int:pk>', views.vote, name='vote'),
     path('result', views.result, name='result'),
+    path('contacts', views.contacts, name='contacts'),
     path('accounts/', include('accounts.urls'))
 
 ]

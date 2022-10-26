@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 import os
-import django_heroku
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 import django_heroku
@@ -29,10 +29,10 @@ SECRET_KEY = 'django-insecure-fpim1((pz0g7&7@9r_06-_afx8z%pzqvc!q7iwi1jq6se2*b$)
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['sovs.herokuapp.com']
+ALLOWED_HOSTS = ['SOVS.herokuapp.com']
 
 
-# Application definition
+#Application definition
 
 INSTALLED_APPS = [
     'jazzmin',
@@ -44,8 +44,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'pollapp',
     'accounts'
-
-
 
 ]
 
@@ -85,12 +83,12 @@ WSGI_APPLICATION = 'SOVS.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'd4o6ebv6mven9u',
         'USER':'blqwbdqjtmegpx',
-        'PASSWORD':'0d6061dcde03c83acaeeab2fb719b371be86ef56ae0f8b85af5436fd86b3fc61',
-        'HOST':'ec2-54-91-223-99.compute-1.amazonaws.com',
         'PORT':'5432',
+        'HOST':'ec2-54-91-223-99.compute-1.amazonaws.com',
+        'PASSWORD':'0d6061dcde03c83acaeeab2fb719b371be86ef56ae0f8b85af5436fd86b3fc61',
     }
 }
 
@@ -131,18 +129,31 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
+#STATIC_URL = '/static/'
+#STATICFILES_DIRS = [BASE_DIR/'pollapp/static']
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATIC_URL = '/static/'
+STATIC_URL = "/static/"
 STATICFILES_DIRS = [BASE_DIR/'pollapp/static']
 django_heroku.settings(locals())
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 MEDIA_URL ='/media/'
 django_heroku.settings(locals())
+
+
+JAZZMIN_SETTINGS = {
+    "site_header": "Admin Panel",
+
+}
+
+JAZZMIN_UI_TWEAKS = {
+     "theme": "simplex",
+
+}

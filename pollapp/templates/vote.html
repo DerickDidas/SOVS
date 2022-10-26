@@ -2,10 +2,18 @@
 {% block content %}
 
 
+<script type="text/javascript">
+	function preventBack() { window.history.forward(); }
+	setTimeout("preventBack()", 0);
+	window.onunload = function () { null };
+</script>
 
-<a style ="margin-bottomn: 20px"><h3>Pick Your Choice</h3></a>
 
-<h4>{{post.position}}</h4>
+<a style ="margin-bottom: 20px"><h3></h3></a>
+
+
+
+<h2>{{post.position}}</h2>
 
 <form action="" method="post">
 
@@ -22,7 +30,7 @@
 							</a>
                              <div>
                                  <input class="form-check-input me-1" type="radio" name ="choice" value="{{cand.id}}" >
-                                 {{cand.name}}
+                               {{cand.name}}
 
                              </div>
 
@@ -42,15 +50,14 @@
            </div>
 
 </ul>
+    {% if request.method == 'POST'  %}
 
-    <input type="submit" value="Submit"  class = 'btn btn-primary'>
+    {% else %}
 
-
-    <a class = 'btn btn-primary' href="http://127.0.0.1:8000/vote/3">next page</a>
-
-
+    <input type="submit" value="Submit"  class ='btn btn-primary'>
 
 
+    {% endif %}
 </form>
 
 {% endblock %}

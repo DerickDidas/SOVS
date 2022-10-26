@@ -14,9 +14,13 @@
                           {% for po in posi %}
                               <a href=" {% url 'vote' po.id %} " class="list-group-item list-group-item-action">
                                   <h2>{{po.position}}</h2></a>
+
                               </a>
                           {% endfor %}
+
                       </div>
+
+                        <a class = 'btn btn-primary' href="{% url 'result' %}">View Results</a>
                   </centre>
               </div>
           </center>

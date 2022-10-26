@@ -13,6 +13,15 @@ def home(request):
     return render(request, 'home.html', {})
 
 
+def face(request):
+
+    return render(request, 'face.html', {})
+
+
+def contacts(request):
+
+    return render(request, 'contacts.html', {})
+
 
 
 def index(request):
@@ -22,6 +31,7 @@ def index(request):
 
 
 def vote(request,pk):
+    posi = Position.objects.all()
     post = Position.objects.get(id=pk)
     cands = post.choices.all()
 
@@ -34,8 +44,7 @@ def vote(request,pk):
                 selected_option = cands.get(id=inputvalue)
                 selected_option.vote_count += 1
                 selected_option.save()
-                messages.info(request, 'vote has been casted')
-                return render(request, 'vote.html', {})
+                return render(request, 'index.html', {'posi': posi})
 
         except :
             messages.info(request, "You haven't casted any vote!!Click here to vote again")

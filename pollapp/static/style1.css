@@ -1,0 +1,36 @@
+*
+{
+
+	font-family: 'poppins', sans-serif;
+	box-sizing: border-box;
+}
+
+
+.launch-time{
+    display: flex;
+    padding-left: 25px;
+    height: 50px;
+    width: 240px;
+    text-align: left;
+    border-width: 3px;
+    border-style: outset;
+    border-color: #cccccc;
+    margin: 10px auto 10px auto;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+}
+
+.launch-time div{
+    flex-basis: 80px;
+}
+
+.launch-time div p{
+    font-size: 21px;
+    margin-bottom: -10px;
+}
+
+.launch-time div span{
+    font-size: 10px;
+
+}
