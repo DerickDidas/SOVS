@@ -84,11 +84,11 @@ WSGI_APPLICATION = 'SOVS.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'd4o6ebv6mven9u',
-        'USER':'blqwbdqjtmegpx',
+        'NAME': 'd5opoanjoupaoh',
+        'USER':'qiczbyqznccglh',
         'PORT':'5432',
-        'HOST':'ec2-54-91-223-99.compute-1.amazonaws.com',
-        'PASSWORD':'0d6061dcde03c83acaeeab2fb719b371be86ef56ae0f8b85af5436fd86b3fc61',
+        'HOST':'ec2-44-210-228-110.compute-1.amazonaws.com',
+        'PASSWORD':'e8573d92255f08e97e89178f2b48ec592b8bdffa46205446ccf1c18d807387b0',
     }
 }
 
