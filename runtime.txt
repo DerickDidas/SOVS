@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 python-3.10.7
+=======
+python-3.10.7
+>>>>>>> e705ee268b1edc7ffd07fb40f02b20c28dbc0d69
